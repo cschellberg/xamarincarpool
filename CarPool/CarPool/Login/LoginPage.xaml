@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login.LoginPage"  Style="{StaticResource windowStyle}">
+
+    <ContentPage.Content>
+        <Grid Padding="10" ColumnSpacing="10" Style="{StaticResource backgroundStyle}" VerticalOptions="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="60" />
+            
+            
+            <RowDefinition Height="60" />
+            <RowDefinition Height="60" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*" />
+            <ColumnDefinition Width="60*" />
+        </Grid.ColumnDefinitions>
+            <Label Text="Email" Style="{StaticResource labelStyle}" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="emailEntry" Placeholder="emaild" Style="{StaticResource entryStyle}" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Password" Style="{StaticResource labelStyle}" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="passwordEntry" IsPassword="true" Style="{StaticResource entryStyle}" Grid.Row="1" Grid.Column="1"/>
+            <Button Text="Login"  Clicked="OnLoginButtonClicked" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" WidthRequest="150" 
+            HorizontalOptions="Center"/>
+            <Button Text="Register"  Clicked="OnRegisterButtonClicked" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" WidthRequest="150" 
+            HorizontalOptions="Center"/>
+            <Label x:Name="messageLabel" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource labelStyle}"/>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

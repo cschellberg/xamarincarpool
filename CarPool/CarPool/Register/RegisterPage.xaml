@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Register.RegisterPage" Style="{StaticResource windowStyle}">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="10" ColumnSpacing="10" Style="{StaticResource backgroundStyle}" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="60*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Email" Grid.Row="0" Grid.Column="0"  Style="{StaticResource labelStyle}"/>
+                <Entry x:Name="emailEntry"  Text="{Binding User.Email}"  Grid.Row="0" Grid.Column="1" Style="{StaticResource entryStyle}"/>
+
+                <Label Text="Password" Grid.Row="1" Grid.Column="0"  Style="{StaticResource labelStyle}"/>
+                <Entry x:Name="passwordEntry" Text="{Binding User.Password}" IsPassword="true" Grid.Row="1" Grid.Column="1" Style="{StaticResource entryStyle}"/>
+
+                <Label Text="Confirm Password" Grid.Row="2" Grid.Column="0"  Style="{StaticResource labelStyle}"/>
+                <Entry x:Name="confirmedPasswordEntry" Text="{Binding User.Password}" IsPassword="true" Grid.Row="2" Grid.Column="1" Style="{StaticResource entryStyle}"/>
+
+                <Label Text="First Name" Grid.Row="3" Grid.Column="0"  Style="{StaticResource labelStyle}"/>
+                <Entry x:Name="firstNameEntry" Text="{Binding User.FirstName}" Grid.Row="3" Grid.Column="1" Style="{StaticResource entryStyle}"/>
+
+                <Label Text="Last Name" Grid.Row="4" Grid.Column="0"  Style="{StaticResource labelStyle}"/>
+                <Entry x:Name="lastNameEntry"  Text="{Binding User.LastName}"  Grid.Row="4" Grid.Column="1" Style="{StaticResource entryStyle}"/>
+
+                <Label Text="Phone Number" Grid.Row="5" Grid.Column="0"  Style="{StaticResource labelStyle}"/>
+                <Entry x:Name="phoneNumberEntry" Text="{Binding User.PhoneNumber}" Grid.Row="5" Grid.Column="1" Style="{StaticResource entryStyle}"/>
+
+                <Label Text="Is driver?" Grid.Row="6" Grid.Column="0"  Style="{StaticResource labelStyle}"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Grid.Row="6" Grid.Column="1">
+                    <Label Text="No"  Style="{StaticResource labelStyle}"/>
+                    <Switch  x:Name="driverSwitch" IsToggled="{Binding User.Driver}" />
+                    <Label Text="Yes"  Style="{StaticResource labelStyle}"/>
+                </StackLayout>
+                <Label Text="Street" Grid.Row="7" Grid.Column="0"  Style="{StaticResource labelStyle}"/>
+                <Entry x:Name="addressEntry" Text="{Binding User.Location.Street}" Grid.Row="7" Grid.Column="1" Style="{StaticResource entryStyle}"/>
+
+                <Label Text="City" Grid.Row="8" Grid.Column="0"  Style="{StaticResource labelStyle}"/>
+                <Entry x:Name="cityEntry"  Text="{Binding User.Location.City}" Grid.Row="8" Grid.Column="1" Style="{StaticResource entryStyle}"/>
+
+                <Label Text="State" Grid.Row="9" Grid.Column="0"  Style="{StaticResource labelStyle}"/>
+                <Entry x:Name="stateEntry"  Text="{Binding User.Location.State}" Grid.Row="9" Grid.Column="1" Style="{StaticResource entryStyle}"/>
+
+                <Label Text="Country" Grid.Row="10" Grid.Column="0"  Style="{StaticResource labelStyle}"/>
+                <Entry x:Name="countryEntry"  Text="{Binding User.Location.Country}" Grid.Row="10" Grid.Column="1" Style="{StaticResource entryStyle}"/>
+
+                <Button Text="Save"  Clicked="OnSaveButtonClicked" Grid.Row="11" Grid.Column="0"  Grid.ColumnSpan="2"  WidthRequest="150" 
+            HorizontalOptions="Center"/>
+                <Label x:Name="messageLabel" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource labelStyle}"/>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

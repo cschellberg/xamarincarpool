@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarPool.CPMasterDetailPageDetail"
+             Title="Detail" Style="{StaticResource windowStyle}">
+    <Grid Padding="10" ColumnSpacing="10" Style="{StaticResource backgroundStyle}" VerticalOptions="Center">
+        <Grid.RowDefinitions>
+        <RowDefinition Height="200" />
+        <RowDefinition Height="60" />
+
+
+        <RowDefinition Height="60" />
+        <RowDefinition Height="60" />
+        <RowDefinition Height="60" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="50*" />
+        <ColumnDefinition Width="50*" />
+    </Grid.ColumnDefinitions>
+    <Label Text="This is a detail page. To get the 'triple' line icon on each platform add a icon to each platform and update the 'Master' page with an Icon that references it."
+            Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource labelStyle}"/>
+        <Button Text="Login"  Clicked="OnLoginButtonClicked" Grid.Row="1" Grid.Column="0"  WidthRequest="150" 
+            HorizontalOptions="Center"/>
+        <Button Text="Register"  Clicked="OnRegisterButtonClicked" Grid.Row="1" Grid.Column="1" WidthRequest="150" 
+            HorizontalOptions="Center"/>
+    </Grid>
+</ContentPage>
